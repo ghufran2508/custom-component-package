@@ -16,6 +16,14 @@ In your GitHub repository, go to "Settings" > "Secrets."
 Click "New repository secret."
 Name the secret, e.g., NPM_PUBLISH_TOKEN, and paste the token as the value.
 Click "Add secret."
+
+#You may need to login to github packages to effectivly use PAT
+```
+npm login --scope=@SCOPE --auth-type=legacy --registry=https://npm.pkg.github.com
+```
+write scope. Enter You github username.
+Password: <Enter_PATH_token> 
+
 3. Update GitHub Actions Workflow:
 Assuming you are using GitHub Actions for your CI/CD workflow:
 
